@@ -10,7 +10,7 @@ import { HiOutlineRefresh } from 'react-icons/hi';
 import { TiTick } from 'react-icons/ti';
 import { GiLouvrePyramid } from 'react-icons/gi';
 import { GrLocation } from 'react-icons/gr';
-import avatar from './avatar.jpg';
+import avatar from './avatar.png';
 import avatar2 from './avatar2.jpg';
 import avatar3 from './avatar3.png';
 import avatar4 from './avatar4.jpg';
@@ -233,7 +233,7 @@ export const areaCustomSeries = [
     dataSource: areaChartData[2],
     xName: 'x',
     yName: 'y',
-    name: 'Germany',
+    name: 'Казахстан',
     opacity: '0.8',
     type: 'SplineArea',
     width: '2',
@@ -242,19 +242,19 @@ export const areaCustomSeries = [
 
 export const barChartData = [
   [
-    { x: 'USA', y: 46 },
-    { x: 'GBR', y: 27 },
-    { x: 'CHN', y: 26 },
+    { x: 'США', y: 46 },
+    { x: 'Россия', y: 27 },
+    { x: 'Китай', y: 26 },
   ],
   [
-    { x: 'USA', y: 37 },
-    { x: 'GBR', y: 23 },
-    { x: 'CHN', y: 18 },
+    { x: 'США', y: 37 },
+    { x: 'Россия', y: 23 },
+    { x: 'Китай', y: 18 },
   ],
   [
-    { x: 'USA', y: 38 },
-    { x: 'GBR', y: 17 },
-    { x: 'CHN', y: 26 },
+    { x: 'США', y: 38 },
+    { x: 'Россия', y: 17 },
+    { x: 'Китай', y: 26 },
   ],
 ];
 
@@ -263,7 +263,7 @@ export const barCustomSeries = [
     dataSource: barChartData[0],
     xName: 'x',
     yName: 'y',
-    name: 'Gold',
+    name: 'Золото',
     type: 'Column',
     marker: {
       dataLabel: {
@@ -277,7 +277,7 @@ export const barCustomSeries = [
     dataSource: barChartData[1],
     xName: 'x',
     yName: 'y',
-    name: 'Silver',
+    name: 'Серебро',
     type: 'Column',
     marker: {
       dataLabel: {
@@ -291,7 +291,7 @@ export const barCustomSeries = [
     dataSource: barChartData[2],
     xName: 'x',
     yName: 'y',
-    name: 'Bronze',
+    name: 'Бронза',
     type: 'Column',
     marker: {
       dataLabel: {
@@ -343,7 +343,7 @@ export const rangeColorMapping = [
 export const ColorMappingPrimaryXAxis = {
   valueType: 'Category',
   majorGridLines: { width: 0 },
-  title: 'Months',
+  title: 'Месяцы',
 };
 
 export const ColorMappingPrimaryYAxis = {
@@ -351,7 +351,7 @@ export const ColorMappingPrimaryYAxis = {
   majorTickLines: { width: 0 },
   minorTickLines: { width: 0 },
   labelFormat: '{value}°C',
-  title: 'Temperature',
+  title: 'Температура',
 };
 
 export const FinancialPrimaryXAxis = {
@@ -471,89 +471,86 @@ export const employeesGrid = [
 
 export const links = [
   {
-    title: 'Dashboard',
+    title: 'ПАНЕЛЬ',
     links: [
       {
         name: 'ecommerce',
+        slug:'Домой',
         icon: <FiShoppingBag />,
       },
     ],
   },
 
   {
-    title: 'Pages',
+    title: 'СТРАНИЦЫ',
     links: [
       {
-        name: 'orders',
+        name: 'Orders',
+        slug:'Заказы',
         icon: <AiOutlineShoppingCart />,
       },
       {
-        name: 'employees',
+        name: 'Employees',
+        slug:'Сотрудники',
         icon: <IoMdContacts />,
       },
       {
-        name: 'customers',
+        name: 'Customers',
+        slug:'Клиенты',
         icon: <RiContactsLine />,
       },
     ],
   },
   {
-    title: 'Apps',
+    title: 'Приложения',
     links: [
       {
-        name: 'calendar',
+        name: 'Calendar',
+        slug:'Календарь',
         icon: <AiOutlineCalendar />,
       },
       {
-        name: 'kanban',
+        name: 'Kanban',
+        slug:'Канбан',
         icon: <BsKanban />,
       },
       {
-        name: 'editor',
+        name: 'Editor',
+        slug:'Редактор',
         icon: <FiEdit />,
       },
       {
-        name: 'color-picker',
+        name: 'Color-picker',
+        slug:'Выбор цвета',
         icon: <BiColorFill />,
       },
     ],
   },
   {
-    title: 'Charts',
+    title: 'Чарты',
     links: [
       {
-        name: 'line',
+        name: 'Line',
+        slug:'Линейный',
         icon: <AiOutlineStock />,
       },
       {
-        name: 'area',
+        name: 'Area',
+        slug:'Зоны',
         icon: <AiOutlineAreaChart />,
       },
 
       {
-        name: 'bar',
+        name: 'Bar',
+        slug:'Бары',
         icon: <AiOutlineBarChart />,
       },
       {
-        name: 'pie',
+        name: 'Pie',
+        slug:'Пирог',
         icon: <FiPieChart />,
       },
-      {
-        name: 'financial',
-        icon: <RiStockLine />,
-      },
-      {
-        name: 'color-mapping',
-        icon: <BsBarChart />,
-      },
-      {
-        name: 'pyramid',
-        icon: <GiLouvrePyramid />,
-      },
-      {
-        name: 'stacked',
-        icon: <AiOutlineBarChart />,
-      },
+
     ],
   },
 ];
@@ -562,22 +559,22 @@ export const cartData = [
   {
     image:
       product5,
-    name: 'butterscotch ice-cream',
-    category: 'Milk product',
+    name: 'Штифты бумажные красные',
+    category: 'Штифты',
     price: '$250',
   },
   {
     image:
       product6,
-    name: 'Supreme fresh tomato',
-    category: 'Vegetable Item',
+    name: 'Штифты бумажные синие',
+    category: 'Штифты',
     price: '$450',
   },
   {
     image:
       product7,
-    name: 'Red color candy',
-    category: 'Food Item',
+    name: 'Штифты бумажные зеленые',
+    category: 'Штифты',
     price: '$190',
   },
 ];
@@ -586,29 +583,29 @@ export const chatData = [
   {
     image:
       avatar2,
-    message: 'Roman Joined the Team!',
-    desc: 'Congratulate him',
+    message: 'Roman присоединился в депортамент продаж!',
+    desc: 'Поздравьте его',
     time: '9:08 AM',
   },
   {
     image:
       avatar3,
-    message: 'New message received',
-    desc: 'Salma sent you new message',
+    message: 'Получено новое сообщение',
+    desc: 'Salma отправила вам новое сообщение',
     time: '11:56 AM',
   },
   {
     image:
       avatar4,
-    message: 'New Payment received',
-    desc: 'Check your earnings',
+    message: 'Получн новый платеж',
+    desc: 'Проверьте свою прибыль',
     time: '4:39 AM',
   },
   {
     image:
       avatar,
-    message: 'Jolly completed tasks',
-    desc: 'Assign her new tasks',
+    message: 'Jolly завершил задачу',
+    desc: 'Поставьте ей новую задачу',
     time: '1:12 AM',
   },
 ];
@@ -618,7 +615,7 @@ export const earningData = [
     icon: <MdOutlineSupervisorAccount />,
     amount: '39,354',
     percentage: '-4%',
-    title: 'Customers',
+    title: 'Клиенты',
     iconColor: '#03C9D7',
     iconBg: '#E5FAFB',
     pcColor: 'red-600',
@@ -627,7 +624,7 @@ export const earningData = [
     icon: <BsBoxSeam />,
     amount: '4,396',
     percentage: '+23%',
-    title: 'Products',
+    title: 'Товары',
     iconColor: 'rgb(255, 244, 229)',
     iconBg: 'rgb(254, 201, 15)',
     pcColor: 'green-600',
@@ -636,7 +633,7 @@ export const earningData = [
     icon: <FiBarChart />,
     amount: '423,39',
     percentage: '+38%',
-    title: 'Sales',
+    title: 'Продажи',
     iconColor: 'rgb(228, 106, 118)',
     iconBg: 'rgb(255, 244, 229)',
 
@@ -646,7 +643,7 @@ export const earningData = [
     icon: <HiOutlineRefresh />,
     amount: '39,354',
     percentage: '-12%',
-    title: 'Refunds',
+    title: 'Оборотка',
     iconColor: 'rgb(0, 194, 146)',
     iconBg: 'rgb(235, 250, 242)',
     pcColor: 'red-600',
@@ -658,7 +655,7 @@ export const recentTransactions = [
     icon: <BsCurrencyDollar />,
     amount: '+$350',
     title: 'Paypal Transfer',
-    desc: 'Money Added',
+    desc: 'Поступила оплата',
     iconColor: '#03C9D7',
     iconBg: '#E5FAFB',
     pcColor: 'green-600',
@@ -666,7 +663,7 @@ export const recentTransactions = [
   {
     icon: <BsShield />,
     amount: '-$560',
-    desc: 'Bill Payment',
+    desc: 'Оплата счета',
     title: 'Wallet',
     iconColor: 'rgb(0, 194, 146)',
     iconBg: 'rgb(235, 250, 242)',
@@ -675,8 +672,8 @@ export const recentTransactions = [
   {
     icon: <FiCreditCard />,
     amount: '+$350',
-    title: 'Credit Card',
-    desc: 'Money reversed',
+    title: 'Оплата в кредит',
+    desc: 'Возврат денег',
     iconColor: 'rgb(255, 244, 229)',
     iconBg: 'rgb(254, 201, 15)',
 
@@ -685,8 +682,8 @@ export const recentTransactions = [
   {
     icon: <TiTick />,
     amount: '+$350',
-    title: 'Bank Transfer',
-    desc: 'Money Added',
+    title: 'Банковский перевод',
+    desc: 'Внесены деньги',
 
     iconColor: 'rgb(228, 106, 118)',
     iconBg: 'rgb(255, 244, 229)',
@@ -696,8 +693,8 @@ export const recentTransactions = [
     icon: <BsCurrencyDollar />,
     amount: '-$50',
     percentage: '+38%',
-    title: 'Refund',
-    desc: 'Payment Sent',
+    title: 'Возврат денег',
+    desc: 'Отправлен платеж',
     iconColor: '#03C9D7',
     iconBg: '#E5FAFB',
     pcColor: 'red-600',
@@ -707,25 +704,25 @@ export const recentTransactions = [
 export const weeklyStats = [
   {
     icon: <FiShoppingCart />,
-    amount: '-$560',
-    title: 'Top Sales',
-    desc: 'Johnathan Doe',
+    amount: '+$560',
+    title: 'Топ продаж',
+    desc: 'Наталья Свистулина',
     iconBg: '#FB9678',
-    pcColor: 'red-600',
+    pcColor: 'green-600',
   },
   {
     icon: <FiStar />,
     amount: '-$560',
-    title: 'Best Seller',
-    desc: 'MaterialPro Admin',
+    title: 'Лучший продажник',
+    desc: 'Наталья Свистулина',
     iconBg: 'rgb(254, 201, 15)',
-    pcColor: 'red-600',
+    pcColor: 'green-600',
   },
   {
     icon: <BsChatLeft />,
     amount: '+$560',
-    title: 'Most Commented',
-    desc: 'Ample Admin',
+    title: 'Популярный товар',
+    desc: 'Эндошприц',
     iconBg: '#00C292',
     pcColor: 'green-600',
   },
@@ -777,21 +774,28 @@ export const medicalproBranding = {
       desc: 'Oct 23, 2021',
     },
     {
-      title: 'Budget',
+      title: 'Бюджет',
       desc: '$98,500',
     },
     {
-      title: 'Expense',
+      title: 'Расходы',
       desc: '$63,000',
     },
   ],
   teams: [
     {
-      name: 'Bootstrap',
+      name: 'Отдел закупа',
+      color: 'green',
+    },    {
+      name: 'Отдел логистики',
+      color: 'tomato',
+    },
+    {
+      name: 'Отдел продаж',
       color: 'orange',
     },
     {
-      name: 'Angular',
+      name: 'Бухгалтерия',
       color: '#FB9678',
     },
   ],
@@ -849,22 +853,22 @@ export const themeColors = [
 export const userProfileData = [
   {
     icon: <BsCurrencyDollar />,
-    title: 'My Profile',
-    desc: 'Account Settings',
+    title: 'Мой профиль',
+    desc: 'Настройки аккаунта',
     iconColor: '#03C9D7',
     iconBg: '#E5FAFB',
   },
   {
     icon: <BsShield />,
-    title: 'My Inbox',
-    desc: 'Messages & Emails',
+    title: 'Моя почта',
+    desc: 'Сообщения & Emails',
     iconColor: 'rgb(0, 194, 146)',
     iconBg: 'rgb(235, 250, 242)',
   },
   {
     icon: <FiCreditCard />,
-    title: 'My Tasks',
-    desc: 'To-do and Daily Tasks',
+    title: 'Мои задачи',
+    desc: 'Незавершенные и задачи на день',
     iconColor: 'rgb(255, 244, 229)',
     iconBg: 'rgb(254, 201, 15)',
   },
@@ -931,7 +935,7 @@ export const customersData = [
     StatusBg: '#8BE78B',
     Weeks: '40',
     Budget: '$2.4k',
-    Location: 'India',
+    Location: 'Беларусь>',
   },
   {
     CustomerID: 1002,
@@ -946,7 +950,7 @@ export const customersData = [
     StatusBg: '#8BE78B',
     Weeks: '11',
     Budget: '$3.9k',
-    Location: 'India',
+    Location: 'Беларусь',
   },
   {
     CustomerID: 1003,
@@ -1001,7 +1005,7 @@ export const customersData = [
     StatusBg: '#8BE78B',
     Weeks: '40',
     Budget: '$2.4k',
-    Location: 'India',
+    Location: 'Беларусь',
   },
   {
     CustomerID: 1007,
@@ -1016,7 +1020,7 @@ export const customersData = [
     StatusBg: '#8BE78B',
     Weeks: '11',
     Budget: '$3.9k',
-    Location: 'India',
+    Location: 'Беларусь',
   },
   {
     CustomerID: 1008,
@@ -1071,7 +1075,7 @@ export const customersData = [
     StatusBg: '#8BE78B',
     Weeks: '40',
     Budget: '$2.4k',
-    Location: 'India',
+    Location: 'Беларусь',
   },
   {
     CustomerID: 1012,
@@ -1086,7 +1090,7 @@ export const customersData = [
     StatusBg: '#8BE78B',
     Weeks: '11',
     Budget: '$3.9k',
-    Location: 'India',
+    Location: 'Беларусь',
   },
   {
     CustomerID: 1013,
@@ -1141,7 +1145,7 @@ export const customersData = [
     StatusBg: '#8BE78B',
     Weeks: '40',
     Budget: '$2.4k',
-    Location: 'India',
+    Location: 'Беларусь',
   },
   {
     CustomerID: 1017,
@@ -1156,7 +1160,7 @@ export const customersData = [
     StatusBg: '#8BE78B',
     Weeks: '11',
     Budget: '$3.9k',
-    Location: 'India',
+    Location: 'Беларусь',
   },
   {
     CustomerID: 1018,
@@ -1211,7 +1215,7 @@ export const customersData = [
     StatusBg: '#8BE78B',
     Weeks: '40',
     Budget: '$2.4k',
-    Location: 'India',
+    Location: 'Беларусь',
   },
   {
     CustomerID: 1022,
@@ -1226,7 +1230,7 @@ export const customersData = [
     StatusBg: '#8BE78B',
     Weeks: '11',
     Budget: '$3.9k',
-    Location: 'India',
+    Location: 'Беларусь',
   },
   {
     CustomerID: 1023,
@@ -1281,7 +1285,7 @@ export const customersData = [
     StatusBg: '#8BE78B',
     Weeks: '40',
     Budget: '$2.4k',
-    Location: 'India',
+    Location: 'Беларусь',
   },
   {
     CustomerID: 1027,
@@ -1296,7 +1300,7 @@ export const customersData = [
     StatusBg: '#8BE78B',
     Weeks: '11',
     Budget: '$3.9k',
-    Location: 'India',
+    Location: 'Беларусь',
   },
   {
     CustomerID: 1028,
@@ -1351,7 +1355,7 @@ export const customersData = [
     StatusBg: '#8BE78B',
     Weeks: '40',
     Budget: '$2.4k',
-    Location: 'India',
+    Location: 'Беларусь',
   },
   {
     CustomerID: 1032,
@@ -1366,7 +1370,7 @@ export const customersData = [
     StatusBg: '#8BE78B',
     Weeks: '11',
     Budget: '$3.9k',
-    Location: 'India',
+    Location: 'Беларусь',
   },
   {
     CustomerID: 1033,
@@ -1421,7 +1425,7 @@ export const customersData = [
     StatusBg: '#8BE78B',
     Weeks: '40',
     Budget: '$2.4k',
-    Location: 'India',
+    Location: 'Беларусь',
   },
   {
     CustomerID: 1037,
@@ -1436,7 +1440,7 @@ export const customersData = [
     StatusBg: '#8BE78B',
     Weeks: '11',
     Budget: '$3.9k',
-    Location: 'India',
+    Location: 'Беларусь',
   },
   {
     CustomerID: 1038,
@@ -2161,7 +2165,7 @@ export const ordersData = [
     CustomerName: 'Anika Viseer',
     TotalAmount: 93.31,
     OrderItems: 'Night Lamp',
-    Location: 'Germany',
+    Location: 'Казахстан',
     Status: 'canceled',
     StatusBg: '#FF5C8E',
     ProductImage:
@@ -2305,7 +2309,7 @@ export const ordersData = [
     CustomerName: 'Anika Viseer',
     TotalAmount: 93.31,
     OrderItems: 'Night Lamp',
-    Location: 'Germany',
+    Location: 'Казахстан',
     Status: 'canceled',
     StatusBg: '#FF5C8E',
     ProductImage:
@@ -2449,7 +2453,7 @@ export const ordersData = [
     CustomerName: 'Anika Viseer',
     TotalAmount: 93.31,
     OrderItems: 'Night Lamp',
-    Location: 'Germany',
+    Location: 'Казахстан',
     Status: 'canceled',
     StatusBg: '#FF5C8E',
     ProductImage:
@@ -2593,7 +2597,7 @@ export const ordersData = [
     CustomerName: 'Anika Viseer',
     TotalAmount: 93.31,
     OrderItems: 'Night Lamp',
-    Location: 'Germany',
+    Location: 'Казахстан',
     Status: 'canceled',
     StatusBg: '#FF5C8E',
     ProductImage:
@@ -2737,7 +2741,7 @@ export const ordersData = [
     CustomerName: 'Anika Viseer',
     TotalAmount: 93.31,
     OrderItems: 'Night Lamp',
-    Location: 'Germany',
+    Location: 'Казахстан',
     Status: 'canceled',
     StatusBg: '#FF5C8E',
     ProductImage:
@@ -3072,14 +3076,14 @@ export const lineChartData = [
 export const dropdownData = [
   {
     Id: '1',
-    Time: 'March 2021',
+    Time: 'Mart 2024',
   },
   {
     Id: '2',
-    Time: 'April 2021',
+    Time: 'Апрель 2024',
   }, {
     Id: '3',
-    Time: 'May 2021',
+    Time: 'Май 2024',
   },
 ];
 export const SparklineAreaData = [
@@ -3095,7 +3099,7 @@ export const lineCustomSeries = [
   { dataSource: lineChartData[0],
     xName: 'x',
     yName: 'y',
-    name: 'Germany',
+    name: 'Казахстан',
     width: '2',
     marker: { visible: true, width: 10, height: 10 },
     type: 'Line' },
@@ -3103,7 +3107,7 @@ export const lineCustomSeries = [
   { dataSource: lineChartData[1],
     xName: 'x',
     yName: 'y',
-    name: 'England',
+    name: 'Беларусь',
     width: '2',
     marker: { visible: true, width: 10, height: 10 },
     type: 'Line' },
@@ -3111,7 +3115,7 @@ export const lineCustomSeries = [
   { dataSource: lineChartData[2],
     xName: 'x',
     yName: 'y',
-    name: 'India',
+    name: 'Россия',
     width: '2',
     marker: { visible: true, width: 10, height: 10 },
     type: 'Line' },
@@ -3119,13 +3123,13 @@ export const lineCustomSeries = [
 ];
 
 export const pieChartData = [
-  { x: 'Labour', y: 18, text: '18%' },
-  { x: 'Legal', y: 8, text: '8%' },
-  { x: 'Production', y: 15, text: '15%' },
-  { x: 'License', y: 11, text: '11%' },
-  { x: 'Facilities', y: 18, text: '18%' },
-  { x: 'Taxes', y: 14, text: '14%' },
-  { x: 'Insurance', y: 16, text: '16%' },
+  { x: 'Рынок труда', y: 18, text: '18%' },
+  { x: 'Юриспруденция', y: 8, text: '8%' },
+  { x: 'Производстов', y: 15, text: '15%' },
+  { x: 'Лицензирование', y: 11, text: '11%' },
+  { x: 'Побочка', y: 18, text: '18%' },
+  { x: 'Налоги', y: 14, text: '14%' },
+  { x: 'Страхование', y: 16, text: '16%' },
 ];
 
 export const contextMenuItems = [
@@ -3180,7 +3184,7 @@ export const stackedCustomSeries = [
   { dataSource: stackedChartData[0],
     xName: 'x',
     yName: 'y',
-    name: 'Budget',
+    name: 'Бюджет',
     type: 'StackingColumn',
     background: 'blue',
 
@@ -3189,7 +3193,7 @@ export const stackedCustomSeries = [
   { dataSource: stackedChartData[1],
     xName: 'x',
     yName: 'y',
-    name: 'Expense',
+    name: 'Расходы',
     type: 'StackingColumn',
     background: 'red',
 
